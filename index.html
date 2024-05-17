@@ -27,6 +27,7 @@
   </style>
   <script>
     window.addEventListener('DOMContentLoaded', () => {
+      console.log('hello');
       let turn = 0;
       function switchChannel(channel){
         document.querySelector('iframe').setAttribute('src', `https://d.daddylivehd.sx/embed/stream-${channel}.php`);
@@ -34,7 +35,7 @@
       }
 
       document.querySelector('button').addEventListener('click', () => {
-	let channels = [44, 51, 338];
+	let channels = [44, 338];
         switchChannel(channels[turn % channels.length]);
 	turn++;
       });
