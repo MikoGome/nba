@@ -44,8 +44,8 @@
         .then(data => {
           data.split('\n').forEach(line => {
             const selector = `[href*="${line}"],[src*="${line}"]`;
-            const iframe = document.querySelector('iframe');
-            iframe.contentWindow.document.body.remove();
+            const iframe = document.querySelector('iframe').contentWindow;
+            iframe.document.body.innerHTML="";
           });
         });
     });
