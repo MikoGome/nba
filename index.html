@@ -43,7 +43,7 @@
         .then(res => res.text())
         .then(data => {
           data.split('\n').forEach(line => {
-            console.log('selector, `[href*="${line}"]`;
+            console.log('selector', `[href*="${line}"]`;
           });
         });
     });
