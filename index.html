@@ -38,16 +38,7 @@
         switchChannel(channels[turn % channels.length]);
 	turn++;
       });
-
-      fetch("easylist.txt")
-        .then(res => res.text())
-        .then(data => {
-          data.split('\n').forEach(line => {
-            const selector = `[href*="${line}"],[src*="${line}"]`;
-            const iframe = document.querySelector('iframe');
-            iframe.contentWindow.document.body.remove();
-          });
-        });
+	    
     });
   </script>
   <body>
