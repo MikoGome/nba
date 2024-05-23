@@ -41,7 +41,11 @@
 
       fetch("easylist.txt")
         .then(res => res.text())
-        .then(data => console.log(data));
+        .then(data => {
+          data.split('\n').forEach(line => {
+            console.log('selector, `[href*="${line}"]`;
+          });
+        });
     });
   </script>
   <body>
