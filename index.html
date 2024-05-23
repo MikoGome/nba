@@ -39,7 +39,7 @@
         switchChannel(channels[turn % channels.length]);
 	turn++;
       });
-
+      window.open = () => console.log('hi');
     });
   </script>
   <body>
